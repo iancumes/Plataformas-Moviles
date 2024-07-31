@@ -31,22 +31,23 @@ class CalculatorTest {
         assertEquals(8.0, result)
     }
 
+    @Test
+    fun testRoot() {
+        val result = Calculator.evaluate("2 r 16")
+        assertEquals(4.0, result)
+    }
+
+    @Test
+    fun testComplexExpression() {
+        val result = Calculator.evaluate("(3 + 5) * 2")
+        assertEquals(16.0, result)
+    }
+
+    @Test
+    fun testNestedParentheses() {
+        val result = Calculator.evaluate("((2 + 3) * (7 - 2))")
+        assertEquals(25.0,result)
+    }
+
 }
 
-@Test
-fun testRoot() {
-    val result = Calculator.evaluate("2 r 16")
-    assertEquals(4.0, result)
-}
-
-@Test
-fun testComplexExpression() {
-    val result = Calculator.evaluate("(3 + 5) * 2")
-    assertEquals(16.0, result)
-}
-
-@Test
-fun testNestedParentheses() {
-    val result = Calculator.evaluate("((2 + 3) * (7 - 2))")
-    assertEquals(25.0,result) 
-}
