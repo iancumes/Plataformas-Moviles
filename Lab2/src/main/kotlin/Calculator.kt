@@ -86,3 +86,10 @@ fun evaluatePostfix(expression: String): Double {
     }
     return stack.pop()
 }
+
+// Function to evaluate infix expression
+fun evaluate(expression: String): Double {
+    return evaluatePostfix(infixToPostfix(expression))
+    }
+}
+        
