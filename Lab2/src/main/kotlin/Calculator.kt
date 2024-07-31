@@ -70,3 +70,19 @@ fun infixToPostfix(expression: String): String {
 
     return result.toString()
 }
+
+fun evaluatePostfix(expression: String): Double {
+    val stack = Stack<Double>()
+    val tokens = expression.split(" ")
+    for (token in tokens) {
+        if (token.isEmpty()) continue
+        if (token[0].isDigit() || token[0] == '.') {
+            stack.push(token.toDouble())
+        } else {
+            val b = stack.pop()
+            val a = if (stack.isNotEmpty() && token[0] != 'e') stack.pop() else 0.0 // Default a to 0 if stack is empty and not 'e'
+            stack.push(applyOp(a, b, token[0]))
+        }
+    }
+    return stack.pop()
+}
