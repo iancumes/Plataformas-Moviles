@@ -19,6 +19,10 @@ class CalculatorTest {
         val result = Calculator.evaluate("4 * 2")
         assertEquals(8.0, result)
     }
-
+    @Test
+    fun testDivision() {
+        val result = Calculator.evaluate("16 / 2")
+        assertEquals(8.0, result)
+    }
 
 }
