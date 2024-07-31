@@ -32,3 +32,9 @@ class CalculatorTest {
     }
 
 }
+
+@Test
+fun testRoot() {
+    val result = Calculator.evaluate("2 r 16")
+    assertEquals(4.0, result)
+}

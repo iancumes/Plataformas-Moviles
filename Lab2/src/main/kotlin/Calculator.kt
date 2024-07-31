@@ -92,4 +92,4 @@ fun evaluate(expression: String): Double {
     return evaluatePostfix(infixToPostfix(expression))
     }
 }
-        
+
