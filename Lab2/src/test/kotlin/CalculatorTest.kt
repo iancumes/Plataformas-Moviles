@@ -24,5 +24,11 @@ class CalculatorTest {
         val result = Calculator.evaluate("16 / 2")
         assertEquals(8.0, result)
     }
+    
+    @Test
+    fun testPower() {
+        val result = Calculator.evaluate("2 ^ 3")
+        assertEquals(8.0, result)
+    }
 
 }
