@@ -9,5 +9,11 @@ class CalculatorTest {
         val result = Calculator.evaluate("3 + 5")
         assertEquals(8.0, result)
     }
+    @Test
+    fun testSubtraction() {
+        val result = Calculator.evaluate("10 - 2")
+        assertEquals(8.0, result)
+    }
+
 
 }
