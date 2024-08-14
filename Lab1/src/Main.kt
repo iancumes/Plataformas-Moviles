@@ -61,3 +61,4 @@ fun iniciaConConsonante(palabra: String): Boolean {
     val consonantes = "bcdfghjklmnpqrstvwxyz"
     return  palabra.lowercase()[0] in consonantes
 }
+
